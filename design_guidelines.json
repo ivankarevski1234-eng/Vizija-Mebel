@@ -1,0 +1,164 @@
+{
+  "theme": "Light Theme (Organic & Earthy / Luxury Hybrid)",
+  "typography": {
+    "fonts": {
+      "headings": "Outfit, sans-serif",
+      "body": "Manrope, sans-serif",
+      "labels": "Outfit, sans-serif"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl lg:text-[7vw] font-black uppercase tracking-tighter leading-[0.85]",
+      "h2": "text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight leading-none",
+      "h3": "text-2xl sm:text-3xl font-semibold uppercase tracking-tight",
+      "h4": "text-xl font-medium",
+      "body": "text-base lg:text-lg leading-relaxed font-light",
+      "labels": "text-xs font-bold uppercase tracking-[0.2em]"
+    },
+    "pairing_archetype": "The Swiss Brutalist (Tech / Art) meets Organic Craft - High contrast weights (Black for headings, Light for body) with bold uppercase display and sterile readable body.",
+    "rules": [
+      "No default sans like Inter or Roboto for headings.",
+      "Headlines MUST use tight letter spacing (tracking-tight or tracking-tighter).",
+      "Never center-align body text. Center-align headings only if intentional for symmetry.",
+      "Uppercase for all major section titles."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": { "hex": "#F7F7F5", "hsl": "60 11% 96%" },
+      "foreground": { "hex": "#1A1A1A", "hsl": "0 0% 10%" },
+      "surface": { "hex": "#FFFFFF", "hsl": "0 0% 100%" },
+      "surface_alt": { "hex": "#EAEAE8", "hsl": "60 5% 91%" },
+      "primary": { "hex": "#1A1A1A", "hsl": "0 0% 10%" },
+      "primary_foreground": { "hex": "#FFFFFF", "hsl": "0 0% 100%" },
+      "accent_wood": { "hex": "#9C6644", "hsl": "23 39% 44%" },
+      "accent_sage": { "hex": "#8A9A86", "hsl": "108 11% 56%" },
+      "accent_brass": { "hex": "#C5A059", "hsl": "40 48% 56%" },
+      "border": { "hex": "#D1D1CD", "hsl": "60 6% 81%" }
+    },
+    "css_variables": {
+      "--background": "60 11% 96%",
+      "--foreground": "0 0% 10%",
+      "--card": "0 0% 100%",
+      "--card-foreground": "0 0% 10%",
+      "--popover": "0 0% 100%",
+      "--popover-foreground": "0 0% 10%",
+      "--primary": "0 0% 10%",
+      "--primary-foreground": "0 0% 100%",
+      "--secondary": "60 5% 91%",
+      "--secondary-foreground": "0 0% 10%",
+      "--muted": "60 5% 91%",
+      "--muted-foreground": "0 0% 40%",
+      "--accent": "23 39% 44%",
+      "--accent-foreground": "0 0% 100%",
+      "--destructive": "0 84% 60%",
+      "--destructive-foreground": "0 0% 100%",
+      "--border": "60 6% 81%",
+      "--input": "60 6% 81%",
+      "--ring": "0 0% 10%"
+    },
+    "rules": [
+      "Use anthracite/charcoal as primary contrast on neutral background.",
+      "Accent colors (wood, sage, brass) are used sparingly for interaction highlights (hover, active, swatches).",
+      "No full-screen generic gradients. Rely on solid color blocking."
+    ]
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing Philosophy - Use 2-3x more spacing than typical. p-8 to p-24.",
+    "grids": {
+      "marketing": "MODE A (Tetris Grid) for Home/Gallery. Asymmetry, wide gaps (gap-8 to gap-12). Leave negative space.",
+      "configurator": "MODE B (High Density Grid) for the configurator dashboard. Tight gaps (gap-4). Every pixel utilized.",
+      "masonry": "Columns format for Gallery with staggered heights."
+    },
+    "alignment": "Optical Alignment > Geometric. Left-align paragraphs and dense content."
+  },
+  "visual_enhancers": {
+    "surfaces": [
+      "Solid Surfaces with sharp 1px borders (border-border).",
+      "No heavy shadows. Use subtle ambient shadow if needed (shadow-sm) combined with 1px border."
+    ],
+    "textures": [
+      "Subtle noise overlay on the hero section to kill digital flatness."
+    ],
+    "images": [
+      "Real product photography treated deliberately. Use clipped frames, spotlight effects.",
+      "Max overlay opacity bg-black/30 on images."
+    ]
+  },
+  "components": {
+    "buttons": "Pill-shaped or sharp rectangular buttons. Dark anthracite background, white text. On hover, background shifts to accent_wood or darkens. Arrow icon animates x: 5px.",
+    "cards": "Cardless or minimal border cards. The 'Technical' look (Grid borders) for features/Why Choose Us.",
+    "swatches": "Circular or rounded-sm squares for CNC panels. 1px border. Hover scales slightly. Active state has an offset ring.",
+    "configurator_panel": "Fixed side panel (or sticky). Clean, tabular layout for live summary. Soft Neumorphism/Crisp edges (border-black/5).",
+    "marquee": "The 'Editorial Ribbon' - very slow, smooth drift. Large uppercase outline text (text-8xl+) running in background, or subtle pale sage bg with dark text.",
+    "navigation": "Sticky header with Crystal Glassmorphism (backdrop-blur-xl bg-background/80) with 1px delicate inner stroke at bottom. Bilingual toggle prominent (MK / EN)."
+  },
+  "layouts": {
+    "home_page": {
+      "hero": "Kinetic Hero with masked line-by-line reveal. Subtext fades in. Background has a 2.5D parallax or subtle scale effect on high-res furniture photo.",
+      "manifesto": "Numbered manifesto chapters. Large typography. Asymmetric layout.",
+      "marquee": "Slow editorial marquee dividing sections: 'CUSTOM MANUFACTURING — PREMIUM CRAFT'.",
+      "featured_products": "Horizontal scroll carousel or bento grid with clipped frames."
+    },
+    "configurator_page": {
+      "layout": "Two-column dense grid. Left: Step-by-step interactive forms (Material, Style, Finish, Dimensions). Right: Live Preview & Summary.",
+      "interactions": "Smooth transitions between steps. Configurator inputs use customized Shadcn forms."
+    }
+  },
+  "motion": {
+    "libraries": ["framer-motion", "lenis"],
+    "presets": {
+      "kinetic_reveal": "Masked text reveal: wrapper overflow-hidden, child animate y: '100%' -> '0%', duration 0.8s, stagger 0.1s.",
+      "scroll_reveal": "Elements fade in and translate y: 30px on viewport enter. Use framer-motion whileInView.",
+      "parallax": "Subtle y-axis transform tied to scroll position via useScroll and useTransform for hero images and floating elements."
+    },
+    "rules": [
+      "Respect prefers-reduced-motion.",
+      "All interactive elements need micro-animations (hover states, scale 0.98 on click)."
+    ]
+  },
+  "3d_libraries": {
+    "recommendation": "Use framer-motion for 2.5D parallax and smooth transitions. Avoid full 3D canvas (R3F) unless specifically providing a 3D furniture viewer in the configurator, which is not strictly requested. Keep it high-end photography focused."
+  },
+  "image_urls": [
+    {
+      "url": "https://images.pexels.com/photos/6908561/pexels-photo-6908561.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Stylish minimalist kitchen with wooden furniture and warm tones",
+      "category": "Hero Background / Kitchen Category"
+    },
+    {
+      "url": "https://images.pexels.com/photos/12277129/pexels-photo-12277129.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Minimalist living room with wooden sideboard",
+      "category": "Living Room Category / Featured Products"
+    },
+    {
+      "url": "https://images.pexels.com/photos/34520428/pexels-photo-34520428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Sunlit workshop showing craftsmanship",
+      "category": "About Section / Craftsmanship Manifesto"
+    },
+    {
+      "url": "https://images.pexels.com/photos/29252361/pexels-photo-29252361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Bright modern kitchen cabinetry",
+      "category": "Gallery / Portfolio"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Execute tool calls in parallel whenever possible.",
+    "Do not use generic placeholders like 'via.placeholder.com' or 'dummyimage.com'. Use the provided image URLs.",
+    "Create Shadcn components in '/app/frontend/src/components/ui/' and customize them according to the styling guidelines.",
+    "Ensure the bilingual toggle works effectively. Use i18next or a simple context switcher for MVP.",
+    "All interactive and key informational elements MUST include a 'data-testid' attribute (e.g., data-testid='nav-about-link', data-testid='configurator-next-btn').",
+    "Implement Lenis for smooth scrolling in the main Layout/App component.",
+    "For the configurator, prioritize dense spacing and crisp borders over rounded cards."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not converge toward generic outputs. Use asymmetrical layouts, bold typography, and layered depth.",
+    "DO NOT use dark colors as gradients.",
+    "DO NOT apply universal transitions like 'transition: all'. Apply to specific properties.",
+    "DO NOT center align the app container (.App { text-align: center; } is forbidden).",
+    "Use pill-shaped or sharp buttons with micro-interactions.",
+    "NEVER use emojis for icons. Use 'lucide-react' or '@phosphor-icons/react'.",
+    "Every interaction needs micro-animations. Static is dead.",
+    "DO NOT use complete transparent backgrounds in headers or overlays with content underneath.",
+    "Use 'sonner' for toast notifications."
+  ]
+}
