@@ -10,7 +10,7 @@ export default function LegalPage({ pageKey }) {
 
   return (
     <div data-testid={`legal-${pageKey}`}>
-      <PageHero kicker="Vizija Mebel" title={data.title} sub={data.updated} />
+      <PageHero kicker="Визија Мебел" title={data.title} sub={data.updated} />
       <section className="max-w-3xl mx-auto px-5 lg:px-10 py-16 lg:py-24">
         <div className="space-y-12">
           {data.sections.map((s, i) => (

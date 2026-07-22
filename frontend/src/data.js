@@ -100,12 +100,51 @@ export const HARDWARE = [
 ];
 
 export const CONFIG_TYPES = [
-  { key: "kitchen", label: { mk: "Кујна", en: "Kitchen" }, image: IMAGES.heroKitchen },
-  { key: "wardrobe", label: { mk: "Плакар", en: "Wardrobe" }, image: IMAGES.wardrobe1 },
-  { key: "living", label: { mk: "Дневна соба", en: "Living Room Unit" }, image: IMAGES.living1 },
-  { key: "bedroom", label: { mk: "Спална соба", en: "Bedroom Set" }, image: IMAGES.bedroom1 },
-  { key: "office", label: { mk: "Канцелариски мебел", en: "Office Furniture" }, image: IMAGES.office1 },
+  { key: "kitchen", label: { mk: "Елементи за Кујна", en: "Kitchen Elements" }, image: IMAGES.heroKitchen },
+  { key: "wardrobe", label: { mk: "Елементи за Плакари", en: "Wardrobe Elements" }, image: IMAGES.wardrobe1 },
+  { key: "living", label: { mk: "Елементи за Дневна соба", en: "Living Room Elements" }, image: IMAGES.living1 },
+  { key: "bedroom", label: { mk: "Елементи за Спална соба", en: "Bedroom Elements" }, image: IMAGES.bedroom1 },
+  { key: "office", label: { mk: "Елементи за Канцелариски Мебел", en: "Office Furniture Elements" }, image: IMAGES.office1 },
 ];
+
+export const ELEMENTS = {
+  kitchen: [
+    { key: "wall_cabinets", label: { mk: "Горни елементи", en: "Wall Cabinets" } },
+    { key: "base_cabinets", label: { mk: "Долни елементи", en: "Base Cabinets" } },
+    { key: "island", label: { mk: "Кујнски остров", en: "Kitchen Island" } },
+    { key: "worktop", label: { mk: "Работна плоча", en: "Worktop" } },
+    { key: "appliance_niche", label: { mk: "Ниша за апарати", en: "Appliance Niche" } },
+    { key: "open_shelving", label: { mk: "Отворени полици", en: "Open Shelving" } },
+  ],
+  wardrobe: [
+    { key: "sliding_doors", label: { mk: "Лизгачки врати", en: "Sliding Doors" } },
+    { key: "interior_shelving", label: { mk: "Внатрешни полици", en: "Interior Shelving" } },
+    { key: "drawers", label: { mk: "Фиоки", en: "Drawers" } },
+    { key: "mirror_panel", label: { mk: "Огледален панел", en: "Mirror Panel" } },
+    { key: "interior_lighting", label: { mk: "Внатрешно осветлување", en: "Interior Lighting" } },
+  ],
+  living: [
+    { key: "sideboard", label: { mk: "Комода", en: "Sideboard" } },
+    { key: "media_wall", label: { mk: "Медиа ѕид", en: "Media Wall" } },
+    { key: "shelving", label: { mk: "Полици", en: "Shelving" } },
+    { key: "display_cabinet", label: { mk: "Витрина", en: "Display Cabinet" } },
+    { key: "tv_niche", label: { mk: "ТВ ниша", en: "TV Niche" } },
+  ],
+  bedroom: [
+    { key: "headboard", label: { mk: "Узглавје", en: "Headboard" } },
+    { key: "wardrobe", label: { mk: "Плакар", en: "Wardrobe" } },
+    { key: "nightstand", label: { mk: "Ноќно шкафче", en: "Nightstand" } },
+    { key: "vanity", label: { mk: "Тоалетна масичка", en: "Vanity" } },
+    { key: "shelving", label: { mk: "Полици", en: "Shelving" } },
+  ],
+  office: [
+    { key: "desk", label: { mk: "Работна маса", en: "Desk" } },
+    { key: "shelving", label: { mk: "Полици", en: "Shelving" } },
+    { key: "filing_cabinet", label: { mk: "Ормар за документи", en: "Filing Cabinet" } },
+    { key: "wall_unit", label: { mk: "Ѕидна единица", en: "Wall Unit" } },
+    { key: "lighting", label: { mk: "Осветлување", en: "Lighting" } },
+  ],
+};
 
 export const CONFIG_STYLES = {
   kitchen: [

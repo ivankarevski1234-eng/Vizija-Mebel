@@ -3,14 +3,14 @@ import { useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import { toast } from "sonner";
-import { Check, Upload, X, CheckCircle2, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
+import { Check, Upload, X, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 import { useSEO } from "@/hooks/useSEO";
 import { Kicker } from "@/components/Btn";
 import {
   Dialog, DialogContent, DialogHeader, DialogTitle,
 } from "@/components/ui/dialog";
-import { CONFIG_TYPES, CONFIG_STYLES, FINISHES, HARDWARE, IMAGES } from "@/data";
+import { CONFIG_TYPES, CONFIG_STYLES, ELEMENTS, FINISHES, HARDWARE, IMAGES } from "@/data";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -40,7 +40,7 @@ export default function CustomManufacturing() {
 
   const [step, setStep] = useState(0);
   const [cfg, setCfg] = useState({
-    type: null, style: null, finish: null, hardware: null,
+    type: null, elements: [], style: null, finish: null, hardware: null,
     preset: null, width: "", height: "", depth: "", notes: "", referenceImage: null,
   });
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -56,10 +56,18 @@ export default function CustomManufacturing() {
   }, [params]);
 
   const set = (patch) => setCfg((c) => ({ ...c, ...patch }));
+  const toggleElement = (key) =>
+    setCfg((c) => ({
+      ...c,
+      elements: c.elements.includes(key) ? c.elements.filter((e) => e !== key) : [...c.elements, key],
+    }));
+
   const selectedType = CONFIG_TYPES.find((c) => c.key === cfg.type);
   const selectedStyle = cfg.type && CONFIG_STYLES[cfg.type]?.find((s) => s.key === cfg.style);
   const selectedFinish = FINISHES.find((f) => f.key === cfg.finish);
   const selectedHw = HARDWARE.find((h) => h.key === cfg.hardware);
+  const availableElements = cfg.type ? ELEMENTS[cfg.type] : [];
+  const selectedElementLabels = availableElements.filter((e) => cfg.elements.includes(e.key)).map((e) => tl(e.label));
 
   const previewImage = selectedStyle?.image || selectedType?.image || IMAGES.heroKitchen;
 
@@ -82,10 +90,14 @@ export default function CustomManufacturing() {
   };
 
   const steps = t.custom.steps;
+  const stepTitles = [
+    t.custom.stepCategory, t.custom.stepElements, t.custom.stepStyle,
+    t.custom.stepFinish, t.custom.stepHardware, t.custom.stepDims, t.custom.stepNotes,
+  ];
 
   const goNext = () => {
     if (step === 0 && !cfg.type) {
-      toast.error(t.custom.selectTypeFirst);
+      toast.error(t.custom.selectCategoryFirst);
       return;
     }
     setStep((s) => Math.min(s + 1, steps.length - 1));
@@ -94,7 +106,7 @@ export default function CustomManufacturing() {
 
   const openRequest = () => {
     if (!cfg.type) {
-      toast.error(t.custom.selectTypeFirst);
+      toast.error(t.custom.selectCategoryFirst);
       return;
     }
     setDialogOpen(true);
@@ -113,6 +125,7 @@ export default function CustomManufacturing() {
         lang,
         config: {
           furnitureType: selectedType ? tl(selectedType.label) : null,
+          elements: selectedElementLabels,
           style: selectedStyle ? tl(selectedStyle.label) : null,
           finish: selectedFinish ? tl(selectedFinish.label) : null,
           finishHex: selectedFinish?.hex || null,
@@ -172,21 +185,49 @@ export default function CustomManufacturing() {
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.35 }}
             >
+              {/* STEP 0 — CATEGORY */}
               {step === 0 && (
-                <div data-testid="step-type">
-                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.step1}</h2>
+                <div data-testid="step-category">
+                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.stepCategory}</h2>
                   <div className="grid grid-cols-2 gap-4">
                     {CONFIG_TYPES.map((c) => (
                       <StepCard key={c.key} testid={`type-${c.key}`} selected={cfg.type === c.key} image={c.image} label={tl(c.label)}
-                        onClick={() => set({ type: c.key, style: null })} />
+                        onClick={() => set({ type: c.key, style: null, elements: [] })} />
                     ))}
                   </div>
                 </div>
               )}
 
+              {/* STEP 1 — ELEMENTS (multi-select) */}
               {step === 1 && (
+                <div data-testid="step-elements">
+                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-2">{t.custom.stepElements}</h2>
+                  {cfg.type ? (
+                    <>
+                      <p className="text-sm text-muted-foreground mb-6">{t.custom.elementsHint}</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {availableElements.map((el) => {
+                          const active = cfg.elements.includes(el.key);
+                          return (
+                            <button key={el.key} data-testid={`element-${el.key}`} onClick={() => toggleElement(el.key)}
+                              className={`flex items-center gap-3 border p-4 text-left transition-all duration-300 ${active ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground"}`}>
+                              <span className={`w-5 h-5 border flex items-center justify-center shrink-0 ${active ? "bg-accent border-accent" : "border-current"}`}>
+                                {active && <Check size={14} className="text-white" />}
+                              </span>
+                              <span className="font-display font-semibold uppercase text-sm tracking-tight">{tl(el.label)}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </>
+                  ) : <p className="text-muted-foreground">{t.custom.selectCategoryFirst}</p>}
+                </div>
+              )}
+
+              {/* STEP 2 — STYLE */}
+              {step === 2 && (
                 <div data-testid="step-style">
-                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.step2}</h2>
+                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.stepStyle}</h2>
                   {cfg.type ? (
                     <div className="grid grid-cols-2 gap-4">
                       {CONFIG_STYLES[cfg.type].map((s) => (
@@ -194,13 +235,14 @@ export default function CustomManufacturing() {
                           onClick={() => set({ style: s.key })} />
                       ))}
                     </div>
-                  ) : <p className="text-muted-foreground">{t.custom.selectTypeFirst}</p>}
+                  ) : <p className="text-muted-foreground">{t.custom.selectCategoryFirst}</p>}
                 </div>
               )}
 
-              {step === 2 && (
+              {/* STEP 3 — FINISH */}
+              {step === 3 && (
                 <div data-testid="step-finish">
-                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.step3}</h2>
+                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.stepFinish}</h2>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                     {FINISHES.map((f) => (
                       <button key={f.key} data-testid={`finish-${f.key}`} onClick={() => set({ finish: f.key })}
@@ -215,9 +257,10 @@ export default function CustomManufacturing() {
                 </div>
               )}
 
-              {step === 3 && (
+              {/* STEP 4 — HARDWARE */}
+              {step === 4 && (
                 <div data-testid="step-hardware">
-                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.step4}</h2>
+                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.stepHardware}</h2>
                   <div className="grid grid-cols-3 gap-4">
                     {HARDWARE.map((h) => (
                       <button key={h.key} data-testid={`hardware-${h.key}`} onClick={() => set({ hardware: h.key })}
@@ -230,9 +273,10 @@ export default function CustomManufacturing() {
                 </div>
               )}
 
-              {step === 4 && (
+              {/* STEP 5 — DIMENSIONS */}
+              {step === 5 && (
                 <div data-testid="step-dimensions">
-                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.step5}</h2>
+                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.stepDims}</h2>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
                     {["small", "medium", "large", "custom"].map((p) => (
                       <button key={p} data-testid={`preset-${p}`} onClick={() => set({ preset: p })}
@@ -255,9 +299,10 @@ export default function CustomManufacturing() {
                 </div>
               )}
 
-              {step === 5 && (
+              {/* STEP 6 — NOTES */}
+              {step === 6 && (
                 <div data-testid="step-notes">
-                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.step6}</h2>
+                  <h2 className="font-display font-bold uppercase text-2xl tracking-tight mb-6">{t.custom.stepNotes}</h2>
                   <textarea rows={5} data-testid="notes-input" value={cfg.notes} onChange={(e) => set({ notes: e.target.value })}
                     placeholder={t.custom.notesPlaceholder}
                     className="w-full bg-card border border-border px-4 py-3 text-sm focus:border-foreground focus:outline-none resize-none" />
@@ -327,17 +372,34 @@ export default function CustomManufacturing() {
             <div className="p-6">
               <h3 className="font-display font-bold uppercase text-lg tracking-tight mb-4">{t.custom.summaryTitle}</h3>
               <dl className="divide-y divide-border text-sm">
+                <div className="flex items-center justify-between py-3 gap-4">
+                  <dt className="text-xs uppercase tracking-widest text-muted-foreground">{t.custom.sCategory}</dt>
+                  <dd className="font-display font-semibold text-right">
+                    {selectedType ? tl(selectedType.label) : <span className="text-muted-foreground/50 font-normal normal-case tracking-normal">{t.custom.notSelected}</span>}
+                  </dd>
+                </div>
+                <div className="flex items-start justify-between py-3 gap-4" data-testid="summary-elements">
+                  <dt className="text-xs uppercase tracking-widest text-muted-foreground shrink-0">{t.custom.sElements}</dt>
+                  <dd className="font-display font-semibold text-right">
+                    {selectedElementLabels.length ? (
+                      <div className="flex flex-wrap justify-end gap-1.5">
+                        {selectedElementLabels.map((l) => (
+                          <span key={l} className="bg-secondary px-2 py-0.5 text-[11px] uppercase tracking-wide">{l}</span>
+                        ))}
+                      </div>
+                    ) : <span className="text-muted-foreground/50 font-normal normal-case tracking-normal">{t.custom.notSelected}</span>}
+                  </dd>
+                </div>
                 {[
-                  [t.custom.sType, selectedType ? tl(selectedType.label) : null],
-                  [t.custom.sStyle, selectedStyle ? tl(selectedStyle.label) : null],
-                  [t.custom.sFinish, selectedFinish ? tl(selectedFinish.label) : null],
-                  [t.custom.sHardware, selectedHw ? tl(selectedHw.label) : null],
-                  [t.custom.sDims, dimsText()],
-                ].map(([k, v], i) => (
+                  [t.custom.sStyle, selectedStyle ? tl(selectedStyle.label) : null, false],
+                  [t.custom.sFinish, selectedFinish ? tl(selectedFinish.label) : null, true],
+                  [t.custom.sHardware, selectedHw ? tl(selectedHw.label) : null, false],
+                  [t.custom.sDims, dimsText(), false],
+                ].map(([k, v, isFinish], i) => (
                   <div key={i} className="flex items-center justify-between py-3 gap-4">
                     <dt className="text-xs uppercase tracking-widest text-muted-foreground">{k}</dt>
                     <dd className="font-display font-semibold text-right flex items-center gap-2">
-                      {k === t.custom.sFinish && selectedFinish && <span className="w-4 h-4 border border-black/10" style={{ background: selectedFinish.hex }} />}
+                      {isFinish && selectedFinish && <span className="w-4 h-4 border border-black/10" style={{ background: selectedFinish.hex }} />}
                       {v || <span className="text-muted-foreground/50 font-normal normal-case tracking-normal">{t.custom.notSelected}</span>}
                     </dd>
                   </div>

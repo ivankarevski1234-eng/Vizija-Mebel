@@ -12,7 +12,7 @@ export const Footer = () => {
       <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-16 lg:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
-            <div className="font-display font-extrabold text-2xl uppercase tracking-tight">Vizija Mebel</div>
+            <div className="font-display font-extrabold text-2xl uppercase tracking-tight">Визија Мебел</div>
             <p className="mt-4 text-sm text-background/60 leading-relaxed max-w-xs">{t.footer.tagline}</p>
             <div className="flex gap-3 mt-6">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" data-testid="social-facebook"
@@ -60,7 +60,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-16 pt-8 border-t border-background/15 flex flex-col md:flex-row justify-between gap-3 text-xs text-background/50">
-          <span>© {year} Vizija Mebel. {t.footer.rights}</span>
+          <span>© {year} Визија Мебел. {t.footer.rights}</span>
           <span>{t.footer.designedBy}</span>
         </div>
       </div>

@@ -56,8 +56,8 @@ export const Header = () => {
     >
       <div className="max-w-[1400px] mx-auto px-5 lg:px-10 flex items-center justify-between h-[72px]">
         <Link to="/" data-testid="logo-link" className="flex flex-col leading-none group">
-          <span className="font-display font-extrabold text-lg tracking-tight uppercase">Vizija Mebel</span>
-          <span className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground group-hover:text-accent transition-colors">Bitola</span>
+          <span className="font-display font-extrabold text-lg tracking-tight uppercase">Визија Мебел</span>
+          <span className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground group-hover:text-accent transition-colors">Битола</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">

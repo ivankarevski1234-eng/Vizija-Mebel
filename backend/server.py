@@ -64,6 +64,7 @@ class BaseDocument(BaseModel):
 # ---------- Models ----------
 class QuoteConfig(BaseModel):
     furnitureType: Optional[str] = None
+    elements: Optional[List[str]] = None
     style: Optional[str] = None
     finish: Optional[str] = None
     finishHex: Optional[str] = None
