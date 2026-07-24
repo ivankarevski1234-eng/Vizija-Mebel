@@ -35,7 +35,7 @@ export default function Home() {
           <FadeIn delay={0.2}>
             <span className="text-xs font-display font-bold uppercase tracking-[0.35em] text-white/70">{t.home.heroKicker}</span>
           </FadeIn>
-          <h1 className="mt-6 font-display font-black uppercase text-white leading-[0.86] tracking-tighter text-[13vw] sm:text-[11vw] lg:text-[8.5vw]">
+          <h1 className="mt-6 font-display font-black uppercase text-white leading-[0.86] tracking-tighter text-[11vw] sm:text-[9vw] lg:text-8xl xl:text-[7.5rem] break-words">
             <MaskLine delay={0.3}>{t.home.heroLine1}</MaskLine>
             <MaskLine delay={0.42}>{t.home.heroLine2}</MaskLine>
             <MaskLine delay={0.54}><span className="text-accent">{t.home.heroLine3}</span></MaskLine>
