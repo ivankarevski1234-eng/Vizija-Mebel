@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
+import { Facebook, MapPin, Phone, Mail } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 
 export const Footer = () => {
@@ -15,13 +15,9 @@ export const Footer = () => {
             <div className="font-display font-extrabold text-2xl uppercase tracking-tight">Визија Мебел</div>
             <p className="mt-4 text-sm text-background/60 leading-relaxed max-w-xs">{t.footer.tagline}</p>
             <div className="flex gap-3 mt-6">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" data-testid="social-facebook"
+              <a href="https://www.facebook.com/profile.php?id=100008771851130" target="_blank" rel="noreferrer" data-testid="social-facebook"
                  className="w-10 h-10 border border-background/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-colors duration-300">
                 <Facebook size={18} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" data-testid="social-instagram"
-                 className="w-10 h-10 border border-background/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-colors duration-300">
-                <Instagram size={18} />
               </a>
             </div>
           </div>

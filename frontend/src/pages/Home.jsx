@@ -112,7 +112,7 @@ export default function Home() {
               {t.home.chapters.map((c, i) => (
                 <Reveal key={i} delay={i * 0.05}>
                   <div className="flex gap-6 lg:gap-10 py-8 border-b border-border last:border-0">
-                    <span className="font-display font-black text-4xl lg:text-5xl text-accent/30 leading-none shrink-0">{c.n}</span>
+                    <span className="font-display font-black text-4xl lg:text-5xl text-accent/30 leading-none shrink-0 w-[1.4em] lg:w-[1.6em]">{c.n}</span>
                     <div>
                       <h3 className="font-display font-semibold uppercase text-xl lg:text-2xl tracking-tight">{c.t}</h3>
                       <p className="mt-3 text-muted-foreground leading-relaxed max-w-md">{c.d}</p>

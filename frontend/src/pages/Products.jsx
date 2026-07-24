@@ -1,13 +1,13 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Download, ArrowUpRight } from "lucide-react";
+import { Download, ArrowUpRight, Mail } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 import { useSEO } from "@/hooks/useSEO";
 import { Reveal } from "@/components/Reveal";
 import { Kicker } from "@/components/Btn";
 import { PageHero } from "@/components/PageHero";
-import { PRODUCTS, CATEGORIES, FINISHES } from "@/data";
+import { PRODUCTS, CATEGORIES, FINISHES, MKD_TO_EUR } from "@/data";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -88,14 +88,21 @@ export default function Products() {
                   <div className="p-6 flex flex-col flex-1">
                     <h3 className="font-display font-semibold uppercase text-lg tracking-tight">{tl(p.name)}</h3>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">{tl(p.desc)}</p>
-                    <Link
-                      to={`/custom?type=${p.cat}`}
-                      data-testid={`customize-${p.id}`}
-                      className="mt-6 inline-flex items-center gap-2 text-xs font-display font-semibold uppercase tracking-[0.12em] text-foreground hover:text-accent transition-colors group/link"
-                    >
-                      {t.common.customize}
-                      <ArrowUpRight size={16} className="transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                    </Link>
+                    <div className="mt-6">
+                      <div className="font-display font-bold text-xl tracking-tight">
+                        {p.price.toLocaleString("mk-MK")} {t.products.currency}
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        ≈ €{Math.round(p.price / MKD_TO_EUR).toLocaleString()}
+                      </div>
+                      <Link
+                        to="/contact"
+                        data-testid={`order-${p.id}`}
+                        className="mt-4 inline-flex items-center gap-2 bg-foreground text-background px-5 py-2.5 text-xs font-display font-semibold uppercase tracking-[0.12em] hover:bg-accent transition-colors"
+                      >
+                        <Mail size={14} /> {t.products.orderBtn}
+                      </Link>
+                    </div>
                   </div>
                 </motion.div>
               ))}
