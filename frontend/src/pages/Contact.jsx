@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { toast } from "sonner";
 import { MapPin, Phone, Mail, Clock, CheckCircle2 } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
@@ -8,7 +7,8 @@ import { Reveal } from "@/components/Reveal";
 import { Kicker } from "@/components/Btn";
 import { PageHero } from "@/components/PageHero";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+// Replace with your real Formspree endpoint, e.g. "https://formspree.io/f/xxxxxxxx"
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mvzevpjb";
 
 const Field = ({ label, name, type = "text", value, onChange, required, testid, textarea }) => (
   <label className="block">
@@ -44,7 +44,12 @@ export default function Contact() {
     }
     setSending(true);
     try {
-      await axios.post(`${API}/contact`, { ...form, lang });
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, lang }),
+      });
+      if (!res.ok) throw new Error("Formspree submission failed");
       setDone(true);
       toast.success(t.contact.successTitle);
       setForm({ name: "", email: "", phone: "", subject: "", message: "" });
@@ -111,7 +116,7 @@ export default function Contact() {
           <iframe
             title="Vizija Mebel Bitola"
             data-testid="google-map"
-            src="https://www.google.com/maps?q=41.02891082894047, 21.300555391310947&output=embed"
+            src="https://www.google.com/maps?q=Bitola,North+Macedonia&output=embed"
             className="w-full h-[420px] grayscale-[0.3]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
