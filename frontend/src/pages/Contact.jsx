@@ -116,7 +116,7 @@ export default function Contact() {
           <iframe
             title="Vizija Mebel Bitola"
             data-testid="google-map"
-            src="https://www.google.com/maps?q=Bitola,North+Macedonia&output=embed"
+            src="https://www.google.com/maps?q=41.02891588743127, 21.300543320638724&output=embed"
             className="w-full h-[420px] grayscale-[0.3]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
