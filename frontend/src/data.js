@@ -85,8 +85,8 @@ export const PRODUCTS = [
   {
     id: 3,
     name: {
-      en: "Ergonomic Executive Desk",
-      mk: "Ергономско канцелариско биро"
+      en: " Round Two-Tier Coffee Table",
+      mk: "Тркалезна двослојна масичка за кафе"
     },
     category: {
       en: "Office",
@@ -103,8 +103,8 @@ export const PRODUCTS = [
   {
     id: 4,
     name: {
-      en: "Acoustic Slatted Wall Accent",
-      mk: "Акустичен ѕиден панел со летви"
+      en: "Nesting Side Tables",
+      mk: "Вгнездени странични маси"
     },
     category: {
       en: "Interior",
@@ -139,8 +139,8 @@ export const PRODUCTS = [
   {
     id: 6,
     name: {
-      en: "Architectural Coffee Table",
-      mk: "Архитектонска масичка за кафе"
+      en: "Four-Door Sideboard",
+      mk: " Комода/Креденца со четири врати"
     },
     category: {
       en: "Living Room",
@@ -175,8 +175,8 @@ export const PRODUCTS = [
   {
     id: 8,
     name: {
-      en: "Contoured Dining Chair",
-      mk: "Анатомски трпезариски стол"
+      en: "Tall Storage Cabinet with Glass-Front Doors",
+      mk: "Висок кабинет за складирање со стаклени предни врати"
     },
     category: {
       en: "Dining",
@@ -193,8 +193,8 @@ export const PRODUCTS = [
   {
     id: 9,
     name: {
-      en: "Sculpted Dining Table Base",
-      mk: "Скулптурирана основа за трпезариска маса"
+      en: "TV Media Console with Wood Slat Front",
+      mk: "ТВ медиумска конзола со предна дрвена летва"
     },
     category: {
       en: "Dining",
@@ -265,8 +265,8 @@ export const PRODUCTS = [
   {
     id: 13,
     name: {
-      en: "Textured Wardrobe Doors Set",
-      mk: "Сет релјефни врати за плакар"
+      en: "Round Outdoor Bistro Table",
+      mk: "Тркалезна надворешна бистро маса"
     },
     category: {
       en: "Bedroom",
@@ -283,8 +283,8 @@ export const PRODUCTS = [
   {
     id: 14,
     name: {
-      en: "Curved Reception Desk",
-      mk: "Закривен рецепциски пулт"
+      en: "Folding Balcony Table",
+      mk: "Преклопна балконска маса"
     },
     category: {
       en: "Office",
@@ -319,8 +319,8 @@ export const PRODUCTS = [
   {
     id: 16,
     name: {
-      en: "Parametric Lounge Bench",
-      mk: "Параметриска клупа за седење"
+      en: "Wall-Mounted Floating Desk",
+      mk: "Ѕидно лебдечко биро"
     },
     category: {
       en: "Interior",
@@ -337,8 +337,8 @@ export const PRODUCTS = [
   {
     id: 17,
     name: {
-      en: "Wave-Pattern Bar Counter Panel",
-      mk: "Панел за шанк со брановиден мотив"
+      en: "Desk with Drawers and Cable Cutout",
+      mk: "Биро со фиоки и исечок за кабли"
     },
     category: {
       en: "Interior",
@@ -355,8 +355,8 @@ export const PRODUCTS = [
   {
     id: 18,
     name: {
-      en: "Modular Storage Cube Set",
-      mk: "Модуларен сет коцки за складирање"
+      en: "Desk with Drawers and Cable Cutout",
+      mk: "Биро со фиоки и исечок за кабли"
     },
     category: {
       en: "Living Room",
@@ -373,8 +373,8 @@ export const PRODUCTS = [
   {
     id: 19,
     name: {
-      en: "Minimalist Entryway Bench",
-      mk: "Минималистичка клупа за предсобје"
+      en: "L-Shaped Corner Desk",
+      mk: "Аголна маса во облик на буквата L"
     },
     category: {
       en: "Interior",
@@ -391,8 +391,8 @@ export const PRODUCTS = [
   {
     id: 20,
     name: {
-      en: "Slatted Room Divider Screen",
-      mk: "Преграден ѕид со дрвени летви"
+      en: "Asymmetric Floating Wall Shelves",
+      mk: "Асиметрични лебдечки полици за ѕид"
     },
     category: {
       en: "Interior",
@@ -409,8 +409,8 @@ export const PRODUCTS = [
   {
     id: 21,
     name: {
-      en: "CNC Molded Mirror Frame",
-      mk: "ЦНЦ обликувана рамка за огледало"
+      en: "Asymmetric Floating Wall Shelves",
+      mk: "Асиметрични лебдечки полици за ѕид"
     },
     category: {
       en: "Interior",
@@ -445,8 +445,8 @@ export const PRODUCTS = [
   {
     id: 23,
     name: {
-      en: "Floating Vanity Unit",
-      mk: "Ѕиден шкаф за купатило"
+      en: "Minimalist Coat Rack",
+      mk: "Минималистичка полица за палта"
     },
     category: {
       en: "Interior",
@@ -463,8 +463,8 @@ export const PRODUCTS = [
   {
     id: 24,
     name: {
-      en: "Hexagonal Wall Tile Set",
-      mk: "Сет хексагонални ѕидни плочки"
+      en: "Leaning Ladder Shelf",
+      mk: "Наклонета полица за скали"
     },
     category: {
       en: "Interior",
@@ -481,8 +481,8 @@ export const PRODUCTS = [
   {
     id: 25,
     name: {
-      en: "Custom CNC Kitchen Cabinet Fronts",
-      mk: "ЦНЦ предни врати за кујнски елементи"
+      en: "Round Wood-Framed Wall Mirror",
+      mk: "Огледало за ѕид со тркалезна дрвена рамка"
     },
     category: {
       en: "Dining",
