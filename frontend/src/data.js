@@ -45,7 +45,7 @@ export const MKD_TO_EUR = 61.5;
 
 // src/data/products.js
 
-export const products = [
+export const PRODUCTS = [
   {
     id: 1,
     name: {
