@@ -1,8 +1,8 @@
 // Bilingual data for Vizija Mebel. Each label object: { mk, en }
 
 export const IMAGES = {
-  heroKitchen: "https://images.unsplash.com/photo-1502005097973-6a7082348e28?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBtaW5pbWFsaXN0JTIwbHV4dXJ5JTIwa2l0Y2hlbiUyMGludGVyaW9yfGVufDB8fHx8MTc4MzQzMzIwMnww&ixlib=rb-4.1.0&q=85",
-  kitchen2: "https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsaXN0JTIwbHV4dXJ5JTIwa2l0Y2hlbiUyMGludGVyaW9yfGVufDB8fHx8MTc4MzQzMzIwMnww&ixlib=rb-4.1.0&q=85",
+  heroKitchen: "https://images.unsplash.com/photo-1502005097973-6a7082348e28?crop=entropy&cs=srgb&fm=png&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBtaW5pbWFsaXN0JTIwbHV4dXJ5JTIwa2l0Y2hlbiUyMGludGVyaW9yfGVufDB8fHx8MTc4MzQzMzIwMnww&ixlib=rb-4.1.0&q=85",
+  kitchen2: "https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?crop=entropy&cs=srgb&fm=png&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsaXN0JTIwbHV4dXJ5JTIwa2l0Y2hlbiUyMGludGVyaW9yfGVufDB8fHx8MTc4MzQzMzIwMnww&ixlib=rb-4.1.0&q=85",
   kitchenMarble: "https://images.pexels.com/photos/20348123/pexels-photo-20348123.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   kitchenWhite: "https://images.pexels.com/photos/37408949/pexels-photo-37408949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   kitchenGrey: "https://images.pexels.com/photos/37803522/pexels-photo-37803522.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -10,7 +10,7 @@ export const IMAGES = {
   wardrobe1: "https://images.pexels.com/photos/6580395/pexels-photo-6580395.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   wardrobe2: "https://images.pexels.com/photos/8135001/pexels-photo-8135001.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   living1: "https://images.pexels.com/photos/12277129/pexels-photo-12277129.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-  living2: "https://images.pexels.com/photos/5870/purple-white-design-decoration.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  living2: "https://images.pexels.com/photos/5870/purple-white-design-decoration.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   bedroom1: "https://images.pexels.com/photos/7546276/pexels-photo-7546276.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   office1: "https://images.pexels.com/photos/19410747/pexels-photo-19410747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   tv1: "https://images.pexels.com/photos/34992777/pexels-photo-34992777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -58,7 +58,7 @@ export const PRODUCTS = [
     },
     price: 18500,
     currency: "MKD",
-    image: "/images/1.jpg",
+    image: "/images/1.png",
     description: {
       en: "Precision CNC-routed vacuumed MDF panel designed for TV units and modern living spaces.",
       mk: "Прецизно ЦНЦ фрезиран и вакуумиран МДФ панел дизајниран за ТВ елементи и модерни простории."
@@ -76,7 +76,7 @@ export const PRODUCTS = [
     },
     price: 6400,
     currency: "MKD",
-    image: "/images/2.jpg",
+    image: "/images/2.png",
     description: {
       en: "Sleek vacuum-formed wooden wall accent with hidden mounting brackets.",
       mk: "Елегантен вакуумски обликуван дрвен ѕиден акцент со скриени носачи за монтажа."
@@ -94,7 +94,7 @@ export const PRODUCTS = [
     },
     price: 24900,
     currency: "MKD",
-    image: "/images/3.jpg",
+    image: "/images/3.png",
     description: {
       en: "Custom contoured desk surface with seamless edge bonding and cable management routing.",
       mk: "Контурирана работна површина со беспрекорна обработка на рабовите и отвори за кабли."
@@ -112,7 +112,7 @@ export const PRODUCTS = [
     },
     price: 12800,
     currency: "MKD",
-    image: "/images/4.jpg",
+    image: "/images/4.png",
     description: {
       en: "Decorative noise-reducing CNC paneling set in natural oak finish.",
       mk: "Декоративна ЦНЦ панела за апсорпција на звук во финиш од природен даб."
@@ -130,7 +130,7 @@ export const PRODUCTS = [
     },
     price: 31000,
     currency: "MKD",
-    image: "/images/5.jpg",
+    image: "/images/5.png",
     description: {
       en: "3D textured vacuum-molded doors with soft-close push mechanisms.",
       mk: "Врати со 3Д текстура вакуумски обликувани со мека push-to-open механика."
@@ -148,7 +148,7 @@ export const PRODUCTS = [
     },
     price: 14200,
     currency: "MKD",
-    image: "/images/6.jpg",
+    image: "/images/6.png",
     description: {
       en: "Sculpted CNC base with smooth laminate finish and tempered top.",
       mk: "Скулптурирана ЦНЦ основа со гладок ламинатен финиш и калено стакло."
@@ -166,7 +166,7 @@ export const PRODUCTS = [
     },
     price: 8900,
     currency: "MKD",
-    image: "/images/7.jpg",
+    image: "/images/7.png",
     description: {
       en: "Laser-cut 3D geometric wall decor with customizable lacquer finishing.",
       mk: "Ласерски сечен 3Д геометриски декор за ѕид со прилагоден лакиран завршен слој."
@@ -184,7 +184,7 @@ export const PRODUCTS = [
     },
     price: 5200,
     currency: "MKD",
-    image: "/images/8.jpg",
+    image: "/images/8.png",
     description: {
       en: "Vacuum-molded plywood seat shell supported by solid hardwood legs.",
       mk: "Вакуумски пресирана иверица/шперплоча со ногарки од цврсто дрво."
@@ -202,7 +202,7 @@ export const PRODUCTS = [
     },
     price: 28500,
     currency: "MKD",
-    image: "/images/9.jpg",
+    image: "/images/9.png",
     description: {
       en: "Multi-axis CNC machined wooden base designed for glass or marble tops.",
       mk: "Дрвена основа изработена на повеќеосен ЦНЦ, наменета за стаклена или мермерна плоча."
@@ -220,7 +220,7 @@ export const PRODUCTS = [
     },
     price: 36000,
     currency: "MKD",
-    image: "/images/10.jpg",
+    image: "/images/10.png",
     description: {
       en: "Seamless entertainment unit with CNC-milled wire channels and vacuumed doors.",
       mk: "Комплетна медиумска единица со ЦНЦ канали за кабли и вакуумирани предни врати."
@@ -238,7 +238,7 @@ export const PRODUCTS = [
     },
     price: 19800,
     currency: "MKD",
-    image: "/images/11.jpg",
+    image: "/images/11.png",
     description: {
       en: "Elegantly routed vertically slatted headboard panel with matte vacuum finish.",
       mk: "Елегантно фрезирано заглавје со вертикални релјефни линии и мат вакуум финиш."
@@ -256,7 +256,7 @@ export const PRODUCTS = [
     },
     price: 4900,
     currency: "MKD",
-    image: "/images/12.jpg",
+    image: "/images/12.png",
     description: {
       en: "Compact wall-mounted nightstand featuring a smooth curved CNC edge profile.",
       mk: "Компактна ѕидна наткасна со мазно заоблен ЦНЦ профил на рабовите."
@@ -274,7 +274,7 @@ export const PRODUCTS = [
     },
     price: 42000,
     currency: "MKD",
-    image: "/images/13.jpg",
+    image: "/images/13.png",
     description: {
       en: "Custom-sized CNC routed door fronts with seamless PVC vacuum wrap.",
       mk: "ЦНЦ фрезирани предни врати по мерка обложени со беспрекорна ПВЦ вакуум фолија."
@@ -292,7 +292,7 @@ export const PRODUCTS = [
     },
     price: 58000,
     currency: "MKD",
-    image: "/images/14.jpg",
+    image: "/images/14.png",
     description: {
       en: "Commercial grade curved front counter with recessed LED channel and CNC routing.",
       mk: "Закривен преден пулт за деловни простории со ЦНЦ релјеф и вграден LED канал."
@@ -310,7 +310,7 @@ export const PRODUCTS = [
     },
     price: 16500,
     currency: "MKD",
-    image: "/images/15.jpg",
+    image: "/images/15.png",
     description: {
       en: "Suspended sound-absorbing panels precision routed from sustainable materials.",
       mk: "Висечки панели за апсорпција на звук, прецизно исечени од еколошки материјали."
@@ -328,7 +328,7 @@ export const PRODUCTS = [
     },
     price: 22400,
     currency: "MKD",
-    image: "/images/16.jpg",
+    image: "/images/16.png",
     description: {
       en: "Fluid organic seating structure composed of interlocking CNC-sliced plywood fins.",
       mk: "Органска конструкција за седење составена од поврзани ЦНЦ сечени дрвени слоеви."
@@ -346,7 +346,7 @@ export const PRODUCTS = [
     },
     price: 17800,
     currency: "MKD",
-    image: "/images/17.jpg",
+    image: "/images/17.png",
     description: {
       en: "3D flowing wave relief panel engineered for bar fronts and hospitality spaces.",
       mk: "3Д релјефен панел со бран за преден дел на шанкови и угостителски објекти."
@@ -364,7 +364,7 @@ export const PRODUCTS = [
     },
     price: 9300,
     currency: "MKD",
-    image: "/images/18.jpg",
+    image: "/images/18.png",
     description: {
       en: "Interlocking wall cubes crafted with high-precision CNC joinery.",
       mk: "Ѕидни коцки кои се спојуваат, изработени со висока ЦНЦ прецизност."
@@ -382,7 +382,7 @@ export const PRODUCTS = [
     },
     price: 11500,
     currency: "MKD",
-    image: "/images/19.jpg",
+    image: "/images/19.png",
     description: {
       en: "Entryway seating unit featuring a shoe storage rack beneath a contoured wooden top.",
       mk: "Елемент за предсобје со простор за чевли под контурираното дрвено седиште."
@@ -400,7 +400,7 @@ export const PRODUCTS = [
     },
     price: 21000,
     currency: "MKD",
-    image: "/images/20.jpg",
+    image: "/images/20.png",
     description: {
       en: "Free-standing or floor-to-ceiling wooden partition screen for modern open plans.",
       mk: "Самостоечка или под-плафон преграда за модерно одвојување на просторот."
@@ -418,7 +418,7 @@ export const PRODUCTS = [
     },
     price: 7600,
     currency: "MKD",
-    image: "/images/21.jpg",
+    image: "/images/21.png",
     description: {
       en: "Organic asymmetrical frame with a vacuum-sealed satin finish.",
       mk: "Органска асиметрична рамка со сатенски вакуумски завршен слој."
@@ -436,7 +436,7 @@ export const PRODUCTS = [
     },
     price: 64000,
     currency: "MKD",
-    image: "/images/22.jpg",
+    image: "/images/22.png",
     description: {
       en: "Large-format meeting table with integrated pop-up power modules and contoured edges.",
       mk: "Голема маса за состаноци со вградени приклучоци за струја и обработени рабови."
@@ -454,7 +454,7 @@ export const PRODUCTS = [
     },
     price: 18900,
     currency: "MKD",
-    image: "/images/23.jpg",
+    image: "/images/23.png",
     description: {
       en: "Moisture-resistant vacuum-wrapped vanity featuring precision CNC-routed drawer fronts.",
       mk: "Водоотпорен вакуумиран елемент со прецизно ЦНЦ фрезирани предни фиоки."
@@ -472,7 +472,7 @@ export const PRODUCTS = [
     },
     price: 6800,
     currency: "MKD",
-    image: "/images/24.jpg",
+    image: "/images/24.png",
     description: {
       en: "Pack of 12 modular 3D wooden tiles designed for feature wall accents.",
       mk: "Пакет од 12 модуларни 3Д дрвени плочки дизајнирани за декорација на ѕидови."
@@ -490,7 +490,7 @@ export const PRODUCTS = [
     },
     price: 49500,
     currency: "MKD",
-    image: "/images/25.jpg",
+    image: "/images/25.png",
     description: {
       en: "Full set of precision-milled cabinet door facades wrapped in durable vacuum foil.",
       mk: "Комплетен сет фрезирани кујнски вратички обложени со издржлива вакуум фолија."
