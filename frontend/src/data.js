@@ -43,39 +43,460 @@ export const CATEGORIES = [
 
 export const MKD_TO_EUR = 61.5;
 
-export const PRODUCTS = [
-  { id: "p13", cat: "living", image: "/images/image- 06.jpg", material: "matte", color: "anthracite", price: 42000,
-    name: { mk: "Комода „Антрацит“", en: "Anthracite Sideboard" },
-    desc: { mk: "Мат антрацит комода со фиоки и хром рачки.", en: "Matte anthracite sideboard with drawers and chrome handles." } },
-  { id: "p14", cat: "office", image: "/images/image- 03.jpg", material: "oak", color: "white", price: 38000,
-    name: { mk: "Аголна работна маса „Студио“", en: "Studio Corner Desk" },
-    desc: { mk: "Аголна работна маса во даб со ѕидна полица и ниша за монитор.", en: "Oak corner desk with a wall shelf and monitor niche." } },
-  { id: "p15", cat: "bedroom", image: "/images/image- 10.jpg", material: "matte", color: "white", price: 46000,
-    name: { mk: "Тоалетна маса „Холивуд“", en: "Hollywood Vanity Table" },
-    desc: { mk: "Тоалетна маса со огледало и Холивуд осветлување, четири фиоки.", en: "Vanity table with mirror and Hollywood lighting, four drawers." } },
-  { id: "p16", cat: "bedroom", image: "/images/image- 04.jpg", material: "oak", color: "white", price: 12500,
-    name: { mk: "Ноќно ормарче „Агол“", en: "Corner Nightstand" },
-    desc: { mk: "Компактно ноќно ормарче во даб со три фиоки.", en: "Compact oak nightstand with three drawers." } },
-  { id: "p17", cat: "living", image: "/images/image- 02.jpg", material: "matte", color: "white", price: 34000,
-    name: { mk: "Конзолна маса со огледало", en: "Console Table with Mirror" },
-    desc: { mk: "Ѕидна конзолна маса со тросекциски врати и придружно огледало.", en: "Wall console table with three-section doors and matching mirror." } },
-  { id: "p18", cat: "living", image: "/images/image- 05.jpg", material: "matte", color: "white", price: 68000,
-    name: { mk: "Трпезариска маса „Пиедестал“", en: "Pedestal Dining Table" },
-    desc: { mk: "Мат бела трпезариска маса со централна пиедестал база.", en: "Matte white dining table with a central pedestal base." } },
-  { id: "p19", cat: "tv", image: "/images/image- 09.jpg", material: "matte", color: "white", price: 39000,
-    name: { mk: "ТВ комода со масичка „Дуо“", en: "TV Unit & Coffee Table Duo" },
-    desc: { mk: "Комплет мат бела ТВ комода со отворени полици и придружна масичка.", en: "Matching matte white TV unit with open shelving and coffee table." } },
-  { id: "p20", cat: "living", image: "/images/image- 07.jpg", material: "oak", color: "white", price: 45000,
-    name: { mk: "Комода „Скандинавиа“", en: "Scandinavia Sideboard" },
-    desc: { mk: "Светла дабова комода со три централни фиоки и странични врати.", en: "Light oak sideboard with three central drawers and side doors." } },
-  { id: "p21", cat: "office", image: "/images/image- 08.jpg", material: "matte", color: "green", price: 56000,
-    name: { mk: "Работен ѕид „Плеј“", en: "Play Study Wall" },
-    desc: { mk: "Игрив работен агол со жолти преградни полици и виси решетка.", en: "Playful study corner with yellow cubby shelving and a hanging grid rack." } },
-  { id: "p22", cat: "bedroom", image: "/images/image- 01.jpg", material: "oak", color: "white", price: 41000,
-    name: { mk: "Работен агол „Резиденс“", en: "Residence Study Corner" },
-    desc: { mk: "Дабов работен агол со полица и вградени фиоки.", en: "Oak study corner with shelving and built-in drawers." } },
-];
+// src/data/products.js
 
+export const products = [
+  {
+    id: 1,
+    name: {
+      en: "Modern CNC Media Wall Panel",
+      mk: "Модерен ЦНЦ ѕиден панел за ТВ"
+    },
+    category: {
+      en: "Living Room",
+      mk: "Дневна соба"
+    },
+    price: 18500,
+    currency: "MKD",
+    image: "/images/1.jpg",
+    description: {
+      en: "Precision CNC-routed vacuumed MDF panel designed for TV units and modern living spaces.",
+      mk: "Прецизно ЦНЦ фрезиран и вакуумиран МДФ панел дизајниран за ТВ елементи и модерни простории."
+    }
+  },
+  {
+    id: 2,
+    name: {
+      en: "Minimalist Floating Shelf Unit",
+      mk: "Минималистичка пливачка полица"
+    },
+    category: {
+      en: "Living Room",
+      mk: "Дневна соба"
+    },
+    price: 6400,
+    currency: "MKD",
+    image: "/images/2.jpg",
+    description: {
+      en: "Sleek vacuum-formed wooden wall accent with hidden mounting brackets.",
+      mk: "Елегантен вакуумски обликуван дрвен ѕиден акцент со скриени носачи за монтажа."
+    }
+  },
+  {
+    id: 3,
+    name: {
+      en: "Ergonomic Executive Desk",
+      mk: "Ергономско канцелариско биро"
+    },
+    category: {
+      en: "Office",
+      mk: "Канцеларија"
+    },
+    price: 24900,
+    currency: "MKD",
+    image: "/images/3.jpg",
+    description: {
+      en: "Custom contoured desk surface with seamless edge bonding and cable management routing.",
+      mk: "Контурирана работна површина со беспрекорна обработка на рабовите и отвори за кабли."
+    }
+  },
+  {
+    id: 4,
+    name: {
+      en: "Acoustic Slatted Wall Accent",
+      mk: "Акустичен ѕиден панел со летви"
+    },
+    category: {
+      en: "Interior",
+      mk: "Ентериер"
+    },
+    price: 12800,
+    currency: "MKD",
+    image: "/images/4.jpg",
+    description: {
+      en: "Decorative noise-reducing CNC paneling set in natural oak finish.",
+      mk: "Декоративна ЦНЦ панела за апсорпција на звук во финиш од природен даб."
+    }
+  },
+  {
+    id: 5,
+    name: {
+      en: "Modular Sideboard Cabinet",
+      mk: "Модуларен комода шкаф",
+    },
+    category: {
+      en: "Living Room",
+      mk: "Дневна соба"
+    },
+    price: 31000,
+    currency: "MKD",
+    image: "/images/5.jpg",
+    description: {
+      en: "3D textured vacuum-molded doors with soft-close push mechanisms.",
+      mk: "Врати со 3Д текстура вакуумски обликувани со мека push-to-open механика."
+    }
+  },
+  {
+    id: 6,
+    name: {
+      en: "Architectural Coffee Table",
+      mk: "Архитектонска масичка за кафе"
+    },
+    category: {
+      en: "Living Room",
+      mk: "Дневна соба"
+    },
+    price: 14200,
+    currency: "MKD",
+    image: "/images/6.jpg",
+    description: {
+      en: "Sculpted CNC base with smooth laminate finish and tempered top.",
+      mk: "Скулптурирана ЦНЦ основа со гладок ламинатен финиш и калено стакло."
+    }
+  },
+  {
+    id: 7,
+    name: {
+      en: "Geometrical Wall Art Panel",
+      mk: "Геометриски ѕиден уметнички панел"
+    },
+    category: {
+      en: "Interior",
+      mk: "Ентериер"
+    },
+    price: 8900,
+    currency: "MKD",
+    image: "/images/7.jpg",
+    description: {
+      en: "Laser-cut 3D geometric wall decor with customizable lacquer finishing.",
+      mk: "Ласерски сечен 3Д геометриски декор за ѕид со прилагоден лакиран завршен слој."
+    }
+  },
+  {
+    id: 8,
+    name: {
+      en: "Contoured Dining Chair",
+      mk: "Анатомски трпезариски стол"
+    },
+    category: {
+      en: "Dining",
+      mk: "Трпезарија"
+    },
+    price: 5200,
+    currency: "MKD",
+    image: "/images/8.jpg",
+    description: {
+      en: "Vacuum-molded plywood seat shell supported by solid hardwood legs.",
+      mk: "Вакуумски пресирана иверица/шперплоча со ногарки од цврсто дрво."
+    }
+  },
+  {
+    id: 9,
+    name: {
+      en: "Sculpted Dining Table Base",
+      mk: "Скулптурирана основа за трпезариска маса"
+    },
+    category: {
+      en: "Dining",
+      mk: "Трпезарија"
+    },
+    price: 28500,
+    currency: "MKD",
+    image: "/images/9.jpg",
+    description: {
+      en: "Multi-axis CNC machined wooden base designed for glass or marble tops.",
+      mk: "Дрвена основа изработена на повеќеосен ЦНЦ, наменета за стаклена или мермерна плоча."
+    }
+  },
+  {
+    id: 10,
+    name: {
+      en: "Integrated TV Wall Console",
+      mk: "Интегрирана ТВ ѕидна конзола"
+    },
+    category: {
+      en: "Living Room",
+      mk: "Дневна соба"
+    },
+    price: 36000,
+    currency: "MKD",
+    image: "/images/10.jpg",
+    description: {
+      en: "Seamless entertainment unit with CNC-milled wire channels and vacuumed doors.",
+      mk: "Комплетна медиумска единица со ЦНЦ канали за кабли и вакуумирани предни врати."
+    }
+  },
+  {
+    id: 11,
+    name: {
+      en: "Fluted Bed Headboard",
+      mk: "Заглавје за кревет со канелури"
+    },
+    category: {
+      en: "Bedroom",
+      mk: "Спална соба"
+    },
+    price: 19800,
+    currency: "MKD",
+    image: "/images/11.jpg",
+    description: {
+      en: "Elegantly routed vertically slatted headboard panel with matte vacuum finish.",
+      mk: "Елегантно фрезирано заглавје со вертикални релјефни линии и мат вакуум финиш."
+    }
+  },
+  {
+    id: 12,
+    name: {
+      en: "Floating Bedside Nightstand",
+      mk: "Ѕидно наткасна за спална"
+    },
+    category: {
+      en: "Bedroom",
+      mk: "Спална соба"
+    },
+    price: 4900,
+    currency: "MKD",
+    image: "/images/12.jpg",
+    description: {
+      en: "Compact wall-mounted nightstand featuring a smooth curved CNC edge profile.",
+      mk: "Компактна ѕидна наткасна со мазно заоблен ЦНЦ профил на рабовите."
+    }
+  },
+  {
+    id: 13,
+    name: {
+      en: "Textured Wardrobe Doors Set",
+      mk: "Сет релјефни врати за плакар"
+    },
+    category: {
+      en: "Bedroom",
+      mk: "Спална соба"
+    },
+    price: 42000,
+    currency: "MKD",
+    image: "/images/13.jpg",
+    description: {
+      en: "Custom-sized CNC routed door fronts with seamless PVC vacuum wrap.",
+      mk: "ЦНЦ фрезирани предни врати по мерка обложени со беспрекорна ПВЦ вакуум фолија."
+    }
+  },
+  {
+    id: 14,
+    name: {
+      en: "Curved Reception Desk",
+      mk: "Закривен рецепциски пулт"
+    },
+    category: {
+      en: "Office",
+      mk: "Канцеларија"
+    },
+    price: 58000,
+    currency: "MKD",
+    image: "/images/14.jpg",
+    description: {
+      en: "Commercial grade curved front counter with recessed LED channel and CNC routing.",
+      mk: "Закривен преден пулт за деловни простории со ЦНЦ релјеф и вграден LED канал."
+    }
+  },
+  {
+    id: 15,
+    name: {
+      en: "Acoustic Ceiling Baffle Set",
+      mk: "Акустични плафонски панели"
+    },
+    category: {
+      en: "Office",
+      mk: "Канцеларија"
+    },
+    price: 16500,
+    currency: "MKD",
+    image: "/images/15.jpg",
+    description: {
+      en: "Suspended sound-absorbing panels precision routed from sustainable materials.",
+      mk: "Висечки панели за апсорпција на звук, прецизно исечени од еколошки материјали."
+    }
+  },
+  {
+    id: 16,
+    name: {
+      en: "Parametric Lounge Bench",
+      mk: "Параметриска клупа за седење"
+    },
+    category: {
+      en: "Interior",
+      mk: "Ентериер"
+    },
+    price: 22400,
+    currency: "MKD",
+    image: "/images/16.jpg",
+    description: {
+      en: "Fluid organic seating structure composed of interlocking CNC-sliced plywood fins.",
+      mk: "Органска конструкција за седење составена од поврзани ЦНЦ сечени дрвени слоеви."
+    }
+  },
+  {
+    id: 17,
+    name: {
+      en: "Wave-Pattern Bar Counter Panel",
+      mk: "Панел за шанк со брановиден мотив"
+    },
+    category: {
+      en: "Interior",
+      mk: "Ентериер"
+    },
+    price: 17800,
+    currency: "MKD",
+    image: "/images/17.jpg",
+    description: {
+      en: "3D flowing wave relief panel engineered for bar fronts and hospitality spaces.",
+      mk: "3Д релјефен панел со бран за преден дел на шанкови и угостителски објекти."
+    }
+  },
+  {
+    id: 18,
+    name: {
+      en: "Modular Storage Cube Set",
+      mk: "Модуларен сет коцки за складирање"
+    },
+    category: {
+      en: "Living Room",
+      mk: "Дневна соба"
+    },
+    price: 9300,
+    currency: "MKD",
+    image: "/images/18.jpg",
+    description: {
+      en: "Interlocking wall cubes crafted with high-precision CNC joinery.",
+      mk: "Ѕидни коцки кои се спојуваат, изработени со висока ЦНЦ прецизност."
+    }
+  },
+  {
+    id: 19,
+    name: {
+      en: "Minimalist Entryway Bench",
+      mk: "Минималистичка клупа за предсобје"
+    },
+    category: {
+      en: "Interior",
+      mk: "Ентериер"
+    },
+    price: 11500,
+    currency: "MKD",
+    image: "/images/19.jpg",
+    description: {
+      en: "Entryway seating unit featuring a shoe storage rack beneath a contoured wooden top.",
+      mk: "Елемент за предсобје со простор за чевли под контурираното дрвено седиште."
+    }
+  },
+  {
+    id: 20,
+    name: {
+      en: "Slatted Room Divider Screen",
+      mk: "Преграден ѕид со дрвени летви"
+    },
+    category: {
+      en: "Interior",
+      mk: "Ентериер"
+    },
+    price: 21000,
+    currency: "MKD",
+    image: "/images/20.jpg",
+    description: {
+      en: "Free-standing or floor-to-ceiling wooden partition screen for modern open plans.",
+      mk: "Самостоечка или под-плафон преграда за модерно одвојување на просторот."
+    }
+  },
+  {
+    id: 21,
+    name: {
+      en: "CNC Molded Mirror Frame",
+      mk: "ЦНЦ обликувана рамка за огледало"
+    },
+    category: {
+      en: "Interior",
+      mk: "Ентериер"
+    },
+    price: 7600,
+    currency: "MKD",
+    image: "/images/21.jpg",
+    description: {
+      en: "Organic asymmetrical frame with a vacuum-sealed satin finish.",
+      mk: "Органска асиметрична рамка со сатенски вакуумски завршен слој."
+    }
+  },
+  {
+    id: 22,
+    name: {
+      en: "Ergonomic Conference Table",
+      mk: "Ергономска конференциска маса"
+    },
+    category: {
+      en: "Office",
+      mk: "Канцеларија"
+    },
+    price: 64000,
+    currency: "MKD",
+    image: "/images/22.jpg",
+    description: {
+      en: "Large-format meeting table with integrated pop-up power modules and contoured edges.",
+      mk: "Голема маса за состаноци со вградени приклучоци за струја и обработени рабови."
+    }
+  },
+  {
+    id: 23,
+    name: {
+      en: "Floating Vanity Unit",
+      mk: "Ѕиден шкаф за купатило"
+    },
+    category: {
+      en: "Interior",
+      mk: "Ентериер"
+    },
+    price: 18900,
+    currency: "MKD",
+    image: "/images/23.jpg",
+    description: {
+      en: "Moisture-resistant vacuum-wrapped vanity featuring precision CNC-routed drawer fronts.",
+      mk: "Водоотпорен вакуумиран елемент со прецизно ЦНЦ фрезирани предни фиоки."
+    }
+  },
+  {
+    id: 24,
+    name: {
+      en: "Hexagonal Wall Tile Set",
+      mk: "Сет хексагонални ѕидни плочки"
+    },
+    category: {
+      en: "Interior",
+      mk: "Ентериер"
+    },
+    price: 6800,
+    currency: "MKD",
+    image: "/images/24.jpg",
+    description: {
+      en: "Pack of 12 modular 3D wooden tiles designed for feature wall accents.",
+      mk: "Пакет од 12 модуларни 3Д дрвени плочки дизајнирани за декорација на ѕидови."
+    }
+  },
+  {
+    id: 25,
+    name: {
+      en: "Custom CNC Kitchen Cabinet Fronts",
+      mk: "ЦНЦ предни врати за кујнски елементи"
+    },
+    category: {
+      en: "Dining",
+      mk: "Трпезарија"
+    },
+    price: 49500,
+    currency: "MKD",
+    image: "/images/25.jpg",
+    description: {
+      en: "Full set of precision-milled cabinet door facades wrapped in durable vacuum foil.",
+      mk: "Комплетен сет фрезирани кујнски вратички обложени со издржлива вакуум фолија."
+    }
+  }
+];
 export const FINISHES = [
   { key: "matte_white", label: { mk: "Мат бела", en: "Matte White" }, hex: "#F1EFEA" },
   { key: "beech", label: { mk: "Бука", en: "Beech" }, hex: "#D9BB94" },
