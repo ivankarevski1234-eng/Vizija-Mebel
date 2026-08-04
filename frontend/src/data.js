@@ -49,8 +49,8 @@ export const PRODUCTS = [
   {
     id: 1,
     name: {
-      en: "Modern CNC Media Wall Panel",
-      mk: "Модерен ЦНЦ ѕиден панел за ТВ"
+      en: "Rectangular Dining Table",
+      mk: "Правоаголна трпезариска маса"
     },
     category: {
       en: "Living Room",
