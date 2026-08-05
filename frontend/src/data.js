@@ -134,6 +134,40 @@ export const CONFIG_STYLES = {
   ],
 };
 
+export const CONFIG_ELEMENTS = {
+  kitchen: [
+    { key: "island", label: { mk: "Кујнски остров", en: "Kitchen Island" } },
+    { key: "glass_cabinets", label: { mk: "Стаклени витрини", en: "Glass Display Cabinets" } },
+    { key: "led_lighting", label: { mk: "LED осветлување", en: "LED Lighting" } },
+    { key: "pantry", label: { mk: "Шпајз", en: "Pantry Unit" } },
+    { key: "breakfast_bar", label: { mk: "Бар пулт", en: "Breakfast Bar" } },
+  ],
+  wardrobe: [
+    { key: "mirror_doors", label: { mk: "Огледални врата", en: "Mirror Doors" } },
+    { key: "interior_lighting", label: { mk: "Внатрешно осветлување", en: "Interior Lighting" } },
+    { key: "drawers", label: { mk: "Внатрешни фиоки", en: "Interior Drawers" } },
+    { key: "shoe_rack", label: { mk: "Полица за чевли", en: "Shoe Rack" } },
+  ],
+  living: [
+    { key: "open_shelving", label: { mk: "Отворени полици", en: "Open Shelving" } },
+    { key: "glass_display", label: { mk: "Стаклена витрина", en: "Glass Display" } },
+    { key: "led_backlight", label: { mk: "LED позадинско осветлување", en: "LED Backlighting" } },
+    { key: "storage_drawers", label: { mk: "Фиоки за складирање", en: "Storage Drawers" } },
+  ],
+  bedroom: [
+    { key: "mirrored_wardrobe", label: { mk: "Огледален плакар", en: "Mirrored Wardrobe" } },
+    { key: "under_bed_storage", label: { mk: "Простор под кревет", en: "Under-Bed Storage" } },
+    { key: "bedside_tables", label: { mk: "Ноќни масички", en: "Bedside Tables" } },
+    { key: "led_headboard", label: { mk: "LED узглавје", en: "LED Headboard" } },
+  ],
+  office: [
+    { key: "cable_management", label: { mk: "Менаџмент на кабли", en: "Cable Management" } },
+    { key: "open_shelving", label: { mk: "Отворени полици", en: "Open Shelving" } },
+    { key: "drawers", label: { mk: "Фиоки", en: "Drawers" } },
+    { key: "glass_top", label: { mk: "Стаклена површина", en: "Glass Desktop" } },
+  ],
+};
+
 export const GALLERY = [
   { image: IMAGES.heroKitchen, cat: "kitchen" },
   { image: IMAGES.wardrobe1, cat: "wardrobe" },
