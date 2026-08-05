@@ -391,14 +391,14 @@ export const PRODUCTS = [
   {
     id: 20,
     name: {
-      en: "Asymmetric Floating Wall Shelves",
-      mk: "Асиметрични лебдечки полици за ѕид"
+      en: "4-Door Sideboard with Open Display Shelf",
+      mk: "Комода со 4 вратички и отворена средишна полица"
     },
     category: {
       en: "Interior",
       mk: "Ентериер"
     },
-    price: 21000,
+    price: 28000,
     currency: "MKD",
     image: "/images/20.png",
     description: {
