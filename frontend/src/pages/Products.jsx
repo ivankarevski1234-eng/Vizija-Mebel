@@ -1,15 +1,13 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Download, ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 import { useSEO } from "@/hooks/useSEO";
 import { Reveal } from "@/components/Reveal";
 import { Kicker } from "@/components/Btn";
 import { PageHero } from "@/components/PageHero";
 import { PRODUCTS, CATEGORIES, FINISHES, MKD_TO_EUR } from "@/data";
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const FilterGroup = ({ label, options, active, onChange, testid }) => (
   <div>
@@ -137,27 +135,6 @@ export default function Products() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CATALOG DOWNLOAD */}
-      <section className="max-w-[1400px] mx-auto px-5 lg:px-10 py-24 lg:py-32">
-        <div className="border border-border p-10 lg:p-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-          <div className="max-w-xl">
-            <Kicker>{t.products.catalogTitle}</Kicker>
-            <h2 className="mt-4 font-display font-bold uppercase tracking-tight text-3xl sm:text-4xl">{t.products.catalogTitle}</h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed">{t.products.catalogSub}</p>
-          </div>
-          <a
-            href={`${API}/catalog/pdf`}
-            target="_blank"
-            rel="noreferrer"
-            data-testid="download-catalog-btn"
-            className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-5 font-display font-semibold uppercase tracking-[0.12em] text-xs hover:bg-accent transition-colors duration-300 shrink-0"
-          >
-            <Download size={18} />
-            {t.products.downloadCatalog}
-          </a>
         </div>
       </section>
     </div>
