@@ -366,12 +366,6 @@ export default function CustomManufacturing() {
             {/* Preview */}
             <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
               <img src={previewImage} alt="preview" className="w-full h-full object-cover" />
-              {selectedFinish && (
-                <div className="absolute inset-0 transition-colors duration-500" style={{ background: selectedFinish.hex, mixBlendMode: "multiply", opacity: 0.5 }} />
-              )}
-              {selectedFinish && (
-                <div className="absolute inset-0" style={{ background: selectedFinish.hex, mixBlendMode: "soft-light", opacity: 0.4 }} />
-              )}
               <div className="absolute top-3 left-3 bg-background/90 backdrop-blur px-3 py-1 text-[10px] font-display font-bold uppercase tracking-widest">{t.custom.preview}</div>
               {selectedHw && (
                 <div className="absolute bottom-3 right-3 flex items-center gap-2 bg-background/90 backdrop-blur px-3 py-1.5">
