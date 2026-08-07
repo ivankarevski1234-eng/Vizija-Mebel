@@ -48,6 +48,7 @@ export const MKD_TO_EUR = 61.5;
 export const PRODUCTS = [
   {
     id: 1,
+    cat: "living", material: "oak", color: "white",
     name: {
       en: "Rectangular Dining Table",
       mk: "Правоаголна трпезариска маса"
@@ -66,6 +67,7 @@ export const PRODUCTS = [
   },
   {
     id: 2,
+    cat: "living", material: "walnut", color: "anthracite",
     name: {
       en: "Minimalist Floating Shelf Unit",
       mk: "Минималистичка пливачка полица"
@@ -84,6 +86,7 @@ export const PRODUCTS = [
   },
   {
     id: 3,
+    cat: "living", material: "oak", color: "white",
     name: {
       en: " Round Two-Tier Coffee Table",
       mk: "Тркалезна двослојна масичка за кафе"
@@ -102,6 +105,7 @@ export const PRODUCTS = [
   },
   {
     id: 4,
+    cat: "living", material: "oak", color: "white",
     name: {
       en: "Nesting Side Tables",
       mk: "Вгнездени странични маси"
@@ -120,6 +124,7 @@ export const PRODUCTS = [
   },
   {
     id: 5,
+    cat: "office", material: "oak", color: "anthracite",
     name: {
       en: "Modular Sideboard Cabinet",
       mk: "Модуларен комода шкаф",
@@ -138,6 +143,7 @@ export const PRODUCTS = [
   },
   {
     id: 6,
+    cat: "living", material: "matte", color: "white",
     name: {
       en: "Four-Door Sideboard",
       mk: " Комода/Креденца со четири врати"
@@ -156,6 +162,7 @@ export const PRODUCTS = [
   },
   {
     id: 7,
+    cat: "office", material: "oak", color: "white",
     name: {
       en: "Geometrical Wall Art Panel",
       mk: "Геометриски ѕиден уметнички панел"
@@ -174,6 +181,7 @@ export const PRODUCTS = [
   },
   {
     id: 8,
+    cat: "wardrobe", material: "oak", color: "white",
     name: {
       en: "Tall Storage Cabinet with Glass-Front Doors",
       mk: "Висок кабинет за складирање со стаклени предни врати"
@@ -192,6 +200,7 @@ export const PRODUCTS = [
   },
   {
     id: 9,
+    cat: "tv", material: "oak", color: "white",
     name: {
       en: "TV Media Console with Wood Slat Front",
       mk: "ТВ медиумска конзола со предна дрвена летва"
@@ -210,6 +219,7 @@ export const PRODUCTS = [
   },
   {
     id: 10,
+    cat: "tv", material: "matte", color: "white",
     name: {
       en: "Integrated TV Wall Console",
       mk: "Интегрирана ТВ ѕидна конзола"
@@ -228,6 +238,7 @@ export const PRODUCTS = [
   },
   {
     id: 11,
+    cat: "living", material: "oak", color: "white",
     name: {
       en: "Fluted Bed Headboard",
       mk: "Заглавје за кревет со канелури"
@@ -246,6 +257,7 @@ export const PRODUCTS = [
   },
   {
     id: 12,
+    cat: "bedroom", material: "oak", color: "white",
     name: {
       en: "Floating Bedside Nightstand",
       mk: "Ѕидно наткасна за спална"
@@ -264,6 +276,7 @@ export const PRODUCTS = [
   },
   {
     id: 13,
+    cat: "living", material: "matte", color: "white",
     name: {
       en: "Round Outdoor Bistro Table",
       mk: "Тркалезна надворешна бистро маса"
@@ -282,6 +295,7 @@ export const PRODUCTS = [
   },
   {
     id: 14,
+    cat: "living", material: "matte", color: "white",
     name: {
       en: "Folding Balcony Table",
       mk: "Преклопна балконска маса"
@@ -300,6 +314,7 @@ export const PRODUCTS = [
   },
   {
     id: 15,
+    cat: "office", material: "walnut", color: "white",
     name: {
       en: "Acoustic Ceiling Baffle Set",
       mk: "Акустични плафонски панели"
@@ -318,6 +333,7 @@ export const PRODUCTS = [
   },
   {
     id: 16,
+    cat: "office", material: "matte", color: "white",
     name: {
       en: "Wall-Mounted Floating Desk",
       mk: "Ѕидно лебдечко биро"
@@ -336,6 +352,7 @@ export const PRODUCTS = [
   },
   {
     id: 17,
+    cat: "office", material: "oak", color: "white",
     name: {
       en: "Desk with Drawers and Cable Cutout",
       mk: "Биро со фиоки и исечок за кабли"
@@ -354,6 +371,7 @@ export const PRODUCTS = [
   },
   {
     id: 18,
+    cat: "office", material: "oak", color: "white",
     name: {
       en: "Desk with Drawers and Cable Cutout",
       mk: "Биро со фиоки и исечок за кабли"
@@ -372,6 +390,7 @@ export const PRODUCTS = [
   },
   {
     id: 19,
+    cat: "office", material: "oak", color: "white",
     name: {
       en: "L-Shaped Corner Desk",
       mk: "Аголна маса во облик на буквата L"
@@ -390,6 +409,7 @@ export const PRODUCTS = [
   },
   {
     id: 20,
+    cat: "living", material: "matte", color: "brass",
     name: {
       en: "4-Door Sideboard with Open Display Shelf",
       mk: "Комода со 4 вратички и отворена средишна полица "
@@ -408,6 +428,7 @@ export const PRODUCTS = [
   },
   {
     id: 21,
+    cat: "living", material: "oak", color: "white",
     name: {
       en: "Asymmetric Floating Wall Shelves",
       mk: "Асиметрични лебдечки полици за ѕид"
@@ -426,6 +447,7 @@ export const PRODUCTS = [
   },
   {
     id: 22,
+    cat: "living", material: "oak", color: "white",
     name: {
       en: "Ergonomic Conference Table",
       mk: "Ергономска конференциска маса"
@@ -444,6 +466,7 @@ export const PRODUCTS = [
   },
   {
     id: 23,
+    cat: "living", material: "oak", color: "anthracite",
     name: {
       en: "Minimalist Coat Rack",
       mk: "Минималистичка полица за палта"
@@ -462,6 +485,7 @@ export const PRODUCTS = [
   },
   {
     id: 24,
+    cat: "living", material: "oak", color: "white",
     name: {
       en: "Leaning Ladder Shelf",
       mk: "Наклонета полица за скали"
@@ -480,6 +504,7 @@ export const PRODUCTS = [
   },
   {
     id: 25,
+    cat: "living", material: "oak", color: "white",
     name: {
       en: "Round Wood-Framed Wall Mirror",
       mk: "Огледало за ѕид со тркалезна дрвена рамка"
